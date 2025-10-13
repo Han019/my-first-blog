@@ -1,15 +1,14 @@
 import requests
 from PIL import Image
-import pillow_heif
 import os
 
-direc='./mountain.HEIC'
-pillow_heif.register_heif_opener()
-img=Image.open(direc)
-img.save('./mountain.jpg',format("jpeg"))
+#direc='./mountain.HEIC'
+#pillow_heif.register_heif_opener()
+#img=Image.open(direc)
+#img.save('./mountain.jpg',format("jpeg"))
 
 
-HOST="http://127.0.0.1:8000"
+HOST="http://hsh019.pythonanywhere.com"#"http://127.0.0.1:8000"
 res= requests.post(HOST +"/api-token-auth/",{
     'username':'admin',
     'password':'1q2w3e4r', 
